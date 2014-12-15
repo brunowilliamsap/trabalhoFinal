@@ -1,0 +1,18 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity IRDA is
+	port (
+		IRDA_out: out std_logic_vector(31 downto 0);
+end processor;
+	
+	signal irda_padrao: std_logic_vector(31 downto 0);
+
+architecture structural of IRDA is
+begin
+	irda_pardao <= "00000000000000000000000000000000";
+	IRDA_out <= irda_padrao;
+
+end structural;
+

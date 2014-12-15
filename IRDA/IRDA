@@ -1,0 +1,19 @@
+		add $t0, $zero, $zero
+		addi $t1, $zero, 9
+		add $a0, $zero, $zero
+		addi $a1, $zero, 2
+		addi $a0, $zero, 1
+		addi $a1, $zero, 1
+		beq $a0, $a1, amarelo
+		bne $a1, $a0, azul
+amarelo:	addi $t3, $zero, 1
+		lw $v0,($t3)
+		sw $v0,($t0)
+		addi $t0, $t0, 1
+		bne $t0, $t1, amarelo
+		j fim
+azul:		addi $v0, $zero, 0
+		sw $v0,($t0)
+		addi $t0, $t0, 1
+		bne $t0, $t1, azul
+fim:		addi $t0, $zero, 0
